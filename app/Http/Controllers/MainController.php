@@ -14,8 +14,11 @@ class MainController extends Controller
 
     public function dresses()
     {
-        $data = Dress::all();
-        dd($data);
+        $dresses = Dress::all();
+        // dd($dresses);
+        $dresses = [
+            "dresses" => $dresses;
+        ];
         return view("dresses");
     }
 }
