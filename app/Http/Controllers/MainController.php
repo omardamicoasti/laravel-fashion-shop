@@ -15,10 +15,12 @@ class MainController extends Controller
     public function dresses()
     {
         $dresses = Dress::all();
-        // dd($dresses);
-        $dresses = [
-            "dresses" => $dresses;
-        ];
-        return view("dresses");
+                
+        return view("dresses", compact("dresses"));
+    }
+
+    public function informations()
+    {
+        return view("informations");
     }
 }

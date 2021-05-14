@@ -6,14 +6,10 @@
 @section('content')
 
     <h1>Dresses list</h1>
-    <?php
-        foreach ($dresses as $dress) {
-            echo "prova"
-        }
-
-
-
-
-    ?>
+    
+    
+    @foreach ($dresses as $dress)
+        <p>{{ $dress->type }}</p>  
+    @endforeach
     
 @endsection
